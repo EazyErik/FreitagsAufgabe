@@ -17,7 +17,7 @@ public class PasswortAufgabe {
 
 
     public static boolean checkForSmallAndBigLetters(String password) {
-        return password.matches("([a-z])") && (password.matches("([A-Z])"));
+        return password.matches("(.*[a-z].*)") && (password.matches("(.*[A-Z].*)"));
     }
 
     public static String checkPassword(String password) {

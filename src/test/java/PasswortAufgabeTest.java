@@ -49,7 +49,7 @@ class PasswortAufgabeTest {
         //given
 
         String password = "Hallo123";
-        boolean expected = false;
+        boolean expected = true;
 
         //when
 
@@ -63,7 +63,7 @@ class PasswortAufgabeTest {
     void shouldBeFalseIfPasswordContainsNoNumbers() {
         //given
 
-        String password = "Hallo123";
+        String password = "Hallotralala";
         boolean expected = false ;
 
         //when
@@ -173,10 +173,10 @@ class PasswortAufgabeTest {
 
     @Test
 
-    void shouldReturnTrueForFirstElement() {
+    void shouldReturnTrueForValidPasswords() {
         //given
-        String[] passwords = {"Elefant23456"};
-        String expected = "Elefant23456" ;
+        String[] passwords = {"Elefant23456", "Katzenklo1234"};
+        String[] expected = {"valid","valid"};
 
         //when
 
@@ -184,6 +184,6 @@ class PasswortAufgabeTest {
 
         //then
 
-        Assertions.assertEquals(expected,actual);
+        Assertions.assertArrayEquals(expected,actual);
     }
 }
