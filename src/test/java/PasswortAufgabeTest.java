@@ -45,7 +45,50 @@ class PasswortAufgabeTest {
 
     }
 
+    @Test
 
+    void shouldBeTrueIfPasswordContainsNumbers() {
+        //given
 
+        String password = "Hallo123";
+        boolean expected = false;
+
+        //when
+
+        boolean actual = PasswortAufgabe.checkForNumbers(password);
+
+        //then
+
+        Assertions.assertEquals(expected,actual);
+    }
+    @Test
+    void shouldBeFalseIfPasswordContainsNoNumbers() {
+        //given
+
+        String password = "Hallo123";
+        boolean expected = false ;
+
+        //when
+
+        boolean actual = PasswortAufgabe.checkForNumbers(password);
+
+        //then
+
+        Assertions.assertEquals(expected,actual);
+    }
+
+    @Test
+    void shouldBeTrueIfPasswordContainsSmallAndBigLetters() {
+
+        //given
+        String password = "SoNNe";
+        boolean expected = true;
+
+        //when
+        boolean actual = PasswortAufgabe.checkForSmallAndBigLetters(password);
+
+        //then
+        Assertions.assertEquals(expected,actual);
+    }
 
 }

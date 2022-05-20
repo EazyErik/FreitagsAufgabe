@@ -13,4 +13,20 @@ public class PasswortAufgabe {
         }
         return false;
     }
+
+    public static boolean checkForNumbers(String password) {
+        if (password.matches("(.*[0-9].*)")) {
+            System.out.println("Passwort enthaelt keine Zahlen.");
+            return false;
+        }
+       return false;
+    }
+
+
+    public static boolean checkForSmallAndBigLetters(String password) {
+        if (password.matches(".*[a-z]*") && (password.matches(".*[A-Z]*"))) {
+            return true;
+        }
+        return false;
+    }
 }
