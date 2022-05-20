@@ -91,4 +91,85 @@ class PasswortAufgabeTest {
         Assertions.assertEquals(expected,actual);
     }
 
+    @Test
+    void shouldBeTrueIfPasswordIsValid() {
+        //given
+
+        String password = "Elefant24735";
+        String expected = "valid";
+
+        //then
+
+        String actual = PasswortAufgabe.checkPassword(password);
+
+        //when
+
+        Assertions.assertEquals(expected,actual);
+
+    }
+    @Test
+    void shouldAskUserToEnterBigLetter() {
+        //given
+
+        String password = "elefant24735";
+        String expected = "you should enter small AND big letters";
+
+        //then
+
+       String actual = PasswortAufgabe.checkPassword(password);
+
+        //when
+
+        Assertions.assertEquals(expected,actual);
+
+    }
+    @Test
+    void shouldAskUserToEnterSmallLetters() {
+        //given
+
+        String password = "ELEFANT24735";
+        String expected = "you should enter small AND big letters";
+
+        //then
+
+        String actual = PasswortAufgabe.checkPassword(password);
+
+        //when
+
+        Assertions.assertEquals(expected,actual);
+
+    }
+
+    @Test
+    void shouldAskUserToEnterNumbers() {
+        //given
+
+        String password = "Elefanten";
+        String expected = "you should enter NUMBERS";
+
+        //then
+
+        String actual = PasswortAufgabe.checkPassword(password);
+
+        //when
+
+        Assertions.assertEquals(expected,actual);
+
+    }
+    @Test
+    void shouldAskUserToEnterAtLeast8Characters() {
+        //given
+
+        String password = "Erik14";
+        String expected = "wrong length, should have at least 8 characters";
+
+        //then
+
+        String actual = PasswortAufgabe.checkPassword(password);
+
+        //when
+
+        Assertions.assertEquals(expected,actual);
+
+    }
 }
