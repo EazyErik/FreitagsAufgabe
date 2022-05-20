@@ -8,25 +8,16 @@ public class PasswortAufgabe {
 
 
     public static boolean checkPasswordLength(String password) {
-        if (password.length() >= 8) {
-            return true;
-        }
-        return false;
+        return password.length() >= 8;
     }
 
     public static boolean checkForNumbers(String password) {
-        if (password.matches("(.*[0-9].*)")) {
-            return true;
-        }
-        return false;
+        return password.matches("(.*[0-9].*)");
     }
 
 
     public static boolean checkForSmallAndBigLetters(String password) {
-        if (password.matches("([a-z])") && (password.matches("([A-Z])"))) {
-            return true;
-        }
-        return false;
+        return password.matches("([a-z])") && (password.matches("([A-Z])"));
     }
 
     public static String checkPassword(String password) {
