@@ -21,8 +21,6 @@ class PasswortAufgabeTest {
 
         Assertions.assertEquals(expected,actual);
 
-
-
     }
 
     @Test
@@ -171,5 +169,21 @@ class PasswortAufgabeTest {
 
         Assertions.assertEquals(expected,actual);
 
+    }
+
+    @Test
+
+    void shouldReturnTrueForFirstElement() {
+        //given
+        String[] passwords = {"Elefant23456"};
+        String expected = "Elefant23456" ;
+
+        //when
+
+        String[] actual = PasswortAufgabe.checkPasswords(passwords);
+
+        //then
+
+        Assertions.assertEquals(expected,actual);
     }
 }

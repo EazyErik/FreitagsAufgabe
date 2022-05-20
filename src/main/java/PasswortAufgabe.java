@@ -44,4 +44,15 @@ public class PasswortAufgabe {
             return "wrong length, should have at least 8 characters";
         }
 }
+
+public static String[] checkPasswords(String[] passwords) {
+
+        String[] checkedPasswords = new String[passwords.length];
+        for (int i = 0; i < passwords.length; i++) {
+           String password =  passwords[i];
+          String checkedPassword = checkPassword(password);
+          checkedPasswords[i] = checkedPassword;
+        }
+return checkedPasswords;
+}
 }
