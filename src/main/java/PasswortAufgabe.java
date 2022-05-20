@@ -30,9 +30,9 @@ public class PasswortAufgabe {
     }
 
     public static String checkPassword(String password) {
-        if (checkPasswordLength(password) == true) {
-            if (checkForNumbers(password) == true) {
-                if (checkForSmallAndBigLetters(password) == true) {
+        if (checkPasswordLength(password)) {
+            if (checkForNumbers(password)) {
+                if (checkForSmallAndBigLetters(password)) {
                     return "valid";
                 }else{
                     return "you should enter small AND big letters";
