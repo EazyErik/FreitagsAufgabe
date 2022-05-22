@@ -37,16 +37,16 @@ public class PasswortAufgabe {
 }
 
 
-//    // optionale Loesung, besser zu lesen
+//    // optionale Loesung, besser zu lesen ??!
 
 //    public static String checkPassword(String password) {
-//        if (!checkPasswordLength(password)) { //if (!validPasswordLength())
+//        if (!checkPasswordLength(password)) { //if (!validPasswordLength(password))
 //            return "wrong length, should have at least 8 characters";
 //        }
-//        if (!checkForNumbers(password)) { //if(!containsNumbers())
+//        if (!checkForNumbers(password)) { //if(!containsNumbers(password))
 //            return "you should enter NUMBERS";
 //        }
-//        if (!checkForSmallAndBigLetters(password)) {  //if(!containsSmallAndBigLetters())
+//        if (!checkForSmallAndBigLetters(password)) {  //if(!containsSmallAndBigLetters(password))
 //            return "you should enter small AND big letters";
 //        }
 //        return "valid";
