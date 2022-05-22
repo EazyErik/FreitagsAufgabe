@@ -36,6 +36,22 @@ public class PasswortAufgabe {
         }
 }
 
+
+//    // optionale Loesung, besser zu lesen
+
+//    public static String checkPassword(String password) {
+//        if (!checkPasswordLength(password)) { //if (!validPasswordLength())
+//            return "wrong length, should have at least 8 characters";
+//        }
+//        if (!checkForNumbers(password)) { //if(!containsNumbers())
+//            return "you should enter NUMBERS";
+//        }
+//        if (!checkForSmallAndBigLetters(password)) {  //if(!containsSmallAndBigLetters())
+//            return "you should enter small AND big letters";
+//        }
+//        return "valid";
+//    }
+
 public static String[] checkPasswords(String[] passwords) {
 
         String[] checkedPasswords = new String[passwords.length];
