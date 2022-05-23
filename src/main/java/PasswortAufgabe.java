@@ -37,8 +37,8 @@ public class PasswortAufgabe {
 }
 
 
-//    // optionale Loesung, besser zu lesen ??!
-
+    // optionale Loesung, besser zu lesen ??!!
+//
 //    public static String checkPassword(String password) {
 //        if (!checkPasswordLength(password)) { //if (!validPasswordLength(password))
 //            return "wrong length, should have at least 8 characters";
